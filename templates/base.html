@@ -32,13 +32,13 @@
                                    hx-get="{% url 'book_list_sort' filter='id' direction='ascend' %}"
                                    hx-target="#book-list"
                                    hx-swap="innerHTML">
-                                   <i class="table-icon bi bi-arrow-down-square ms-1"></i>
+                                   <i class="table-icon bi bi-arrow-up-square ms-1 id-ascend disabled-button"></i>
                                 </a>
                                 <a href=""
                                    hx-get="{% url 'book_list_sort' filter='id' direction='descend' %}"
                                    hx-target="#book-list"
                                    hx-swap="innerHTML">
-                                   <i class="table-icon bi bi-arrow-up-square"></i>
+                                   <i class="table-icon bi bi-arrow-down-square id-descend"></i>
                                 </a>
                             </small>
                         </th>
@@ -51,13 +51,13 @@
                                    hx-get="{% url 'book_list_sort' filter='title' direction='ascend' %}"
                                    hx-target="#book-list"
                                    hx-swap="innerHTML">
-                                    <i class="table-icon bi bi-arrow-down-square ms-1"></i>
+                                   <i class="table-icon bi bi-arrow-up-square ms-1 title-ascend"></i>
                                 </a>
                                 <a href=""
                                    hx-get="{% url 'book_list_sort' filter='title' direction='descend' %}"
                                    hx-target="#book-list"
                                    hx-swap="innerHTML">
-                                    <i class="table-icon bi bi-arrow-up-square"></i>
+                                   <i class="table-icon bi bi-arrow-down-square title-descend"></i>
                                 </a>
                             </small>
                         </th>
@@ -70,13 +70,13 @@
                                    hx-get="{% url 'book_list_sort' filter='author' direction='ascend' %}"
                                    hx-target="#book-list"
                                    hx-swap="innerHTML">
-                                    <i class="table-icon bi bi-arrow-down-square ms-1"></i>
+                                   <i class="table-icon bi bi-arrow-up-square ms-1 author-ascend"></i>
                                 </a>
                                 <a href=""
                                    hx-get="{% url 'book_list_sort' filter='author' direction='descend' %}"
                                    hx-target="#book-list"
                                    hx-swap="innerHTML">
-                                    <i class="table-icon bi bi-arrow-up-square"></i>
+                                   <i class="table-icon bi bi-arrow-down-square author-descend"></i>
                                 </a>
                             </small>
                         </th>
@@ -89,13 +89,13 @@
                                    hx-get="{% url 'book_list_sort' filter='price' direction='ascend' %}"
                                    hx-target="#book-list"
                                    hx-swap="innerHTML">
-                                    <i class="table-icon bi bi-arrow-down-square ms-1"></i>
+                                   <i class="table-icon bi bi-arrow-up-square ms-1 price-ascend"></i>
                                 </a>
                                 <a href=""
                                    hx-get="{% url 'book_list_sort' filter='price' direction='descend' %}"
                                    hx-target="#book-list"
                                    hx-swap="innerHTML">
-                                    <i class="table-icon bi bi-arrow-up-square"></i>
+                                   <i class="table-icon bi bi-arrow-down-square price-descend"></i>
                                 </a>
                             </small>
                         </th>
@@ -105,16 +105,16 @@
                             <small>
                                 Status
                                 <a href=""
-                                   hx-get="{% url 'book_list_sort' filter='read' direction='descend' %}"
-                                   hx-target="#book-list"
-                                   hx-swap="innerHTML">
-                                    <i class="table-icon bi bi-arrow-down-square ms-1"></i>
-                                </a>
-                                <a href=""
                                    hx-get="{% url 'book_list_sort' filter='read' direction='ascend' %}"
                                    hx-target="#book-list"
                                    hx-swap="innerHTML">
-                                    <i class="table-icon bi bi-arrow-up-square"></i>
+                                   <i class="table-icon bi bi-arrow-up-square read-ascend"></i>
+                                </a>
+                                <a href=""
+                                   hx-get="{% url 'book_list_sort' filter='read' direction='descend' %}"
+                                   hx-target="#book-list"
+                                   hx-swap="innerHTML">
+                                   <i class="table-icon bi bi-arrow-down-square ms-1 read-descend"></i>
                                 </a>
                             </small>
                         </th>
