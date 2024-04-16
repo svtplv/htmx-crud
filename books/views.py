@@ -60,3 +60,11 @@ def delete_book(request, pk):
     book = get_object_or_404(Book, pk=pk)
     book.delete()
     return HttpResponse()
+
+
+@require_http_methods(['GET'])
+def book_list_sort(request, filter, direction):
+    if direction == 'descend':
+        filter = '-' + filter
+    book_list = Book.objects.order_by(filter)
+    return render(request, 'partial_book_list.html', {'book_list': book_list})
