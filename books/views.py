@@ -1,9 +1,9 @@
 from django.http.response import HttpResponse
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.views.decorators.http import require_http_methods
 
-from .models import Book
 from .forms import BookCreateForm, BookEditForm
+from .models import Book
 
 
 @require_http_methods(['GET', 'POST'])
@@ -42,3 +42,10 @@ def create_book(request):
     if form.is_valid:
         book = form.save()
     return render(request, 'partial_book_detail.html', {'book': book})
+
+
+@require_http_methods(['DELETE'])
+def delete_book(request, pk):
+    book = get_object_or_404(Book, pk=pk)
+    book.delete()
+    return HttpResponse()
